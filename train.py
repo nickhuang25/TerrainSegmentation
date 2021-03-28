@@ -241,8 +241,12 @@ if __name__ == "__main__":
 
     # display_sample([sample_image[0], sample_mask[0]])
     
-    # model = get_model()
+    model = get_model()
 
-    # model_history = model.fit(train_dataset, epochs=EPOCHS,
-    #                       steps_per_epoch=STEPS_PER_EPOCH)
-                          
+    model_history = model.fit(train_dataset, epochs=1,
+                          steps_per_epoch=STEPS_PER_EPOCH)
+
+    model.save('trav_classifier.h5')
+    print("SAVED SUCCESSFULLY")
+    new_model = tf.keras.models.load_model('trav_classifier.h5')
+    new_model.summary()
