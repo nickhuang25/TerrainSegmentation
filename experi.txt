@@ -1,0 +1,57 @@
+Tensorflow ver. 2.3.0
+2021-03-28 13:05:23.219455: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2021-03-28 13:05:23.597781: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000306.png : The system cannot find the file specified.
+; No such file or directory
+2021-03-Traceback (most recent call last):
+2  File "D:\Anaconda3\envs\ted_model\lib\site-packages\tensorflow\python\eager\context.py", line 2102, in execution_mode
+8 13:05:23    yield
+  File "D:\Anaconda3\envs\ted_model\lib\site-packages\tensorflow\python\data\ops\iterator_ops.py", line 755, in _next_internal
+.615381: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000352.png : The system cannot find the file specified.
+; No such file or directory
+2021-03-28 13:05:23.633531: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000113.png : The system cannot find the file specified.
+; No such file or directory
+2021-03-28 13:05:23.649391: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000376.png : The system cannot find the file specified.
+; No such file or directory
+2021-03-28 13:05:23.664057: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000334.png : The system cannot find the file specified.
+; No such file or directory
+2021-03-28 13:05:23.680689: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000120.png : The system cannot find the file specified.
+; No such file or directory
+2021-03-28 13:05:23.695733: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000095.png : The system cannot find the file specified.
+; No such file or directory
+2021-03-28 13:05:23.712928: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000158.png : The system cannot find the file specified.
+; No such file or directory
+2021-03-28 13:05:23.732074: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000289.png : The system cannot find the file specified.
+; No such file or directory
+2021-03-28 13:05:23.745757: W tensorflow/core/framework/op_kernel.cc:1767] OP_REQUIRES failed at whole_file_read_ops.cc:116 : Not found: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000371.png : The system cannot find the file specified.
+; No such file or directory
+    ret = gen_dataset_ops.iterator_get_next(
+  File "D:\Anaconda3\envs\ted_model\lib\site-packages\tensorflow\python\ops\gen_dataset_ops.py", line 2609, in iterator_get_next
+    _ops.raise_from_not_ok_status(e, name)
+  File "D:\Anaconda3\envs\ted_model\lib\site-packages\tensorflow\python\framework\ops.py", line 6843, in raise_from_not_ok_status
+    six.raise_from(core._status_to_exception(e.code, message), None)
+  File "<string>", line 3, in raise_from
+tensorflow.python.framework.errors_impl.NotFoundError: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000306.png : The system cannot find the file specified.
+; No such file or directory
+         [[{{node ReadFile_1}}]] [Op:IteratorGetNext]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "train.py", line 230, in <module>
+    for image, mask in train_dataset.take(1):
+  File "D:\Anaconda3\envs\ted_model\lib\site-packages\tensorflow\python\data\ops\iterator_ops.py", line 736, in __next__
+    return self.next()
+  File "D:\Anaconda3\envs\ted_model\lib\site-packages\tensorflow\python\data\ops\iterator_ops.py", line 772, in next
+    return self._next_internal()
+  File "D:\Anaconda3\envs\ted_model\lib\site-packages\tensorflow\python\data\ops\iterator_ops.py", line 764, in _next_internal
+    return structure.from_compatible_tensor_list(self._element_spec, ret)
+  File "D:\Anaconda3\envs\ted_model\lib\contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "D:\Anaconda3\envs\ted_model\lib\site-packages\tensorflow\python\eager\context.py", line 2105, in execution_mode
+    executor_new.wait()
+  File "D:\Anaconda3\envs\ted_model\lib\site-packages\tensorflow\python\eager\executor.py", line 67, in wait
+    pywrap_tfe.TFE_ExecutorWaitForAllPendingNodes(self._handle)
+tensorflow.python.framework.errors_impl.NotFoundError: NewRandomAccessFile failed to Create/Open: camera\mask\mask_000306.png : The system cannot find the file specified.
+; No such file or directory
+         [[{{node ReadFile_1}}]]
