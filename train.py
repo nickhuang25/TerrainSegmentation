@@ -22,7 +22,7 @@ batch_size = 4
 img_height = 256
 img_width = 256
 n_classes = 3
-EPOCHS = 50
+EPOCHS = 100
 STEPS_PER_EPOCH = 110
 
 
@@ -243,10 +243,10 @@ if __name__ == "__main__":
     
     model = get_model()
 
-    model_history = model.fit(train_dataset, epochs=1,
+    model_history = model.fit(train_dataset, epochs=EPOCHS,
                           steps_per_epoch=STEPS_PER_EPOCH)
 
     model.save('trav_classifier.h5')
-    print("SAVED SUCCESSFULLY")
-    new_model = tf.keras.models.load_model('trav_classifier.h5')
-    new_model.summary()
+    # print("SAVED SUCCESSFULLY")
+    # new_model = tf.keras.models.load_model('trav_classifier.h5')
+    # new_model.summary()
