@@ -22,3 +22,4 @@ for filename in os.listdir(dataset_path):
     img = Image.fromarray(arr_cpy, 'L')
     filename = filename.replace("trav", "mask")
     img.save(output_dir+filename)
+    
